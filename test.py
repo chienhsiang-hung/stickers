@@ -5,7 +5,8 @@ from io import BytesIO
 
 from diffusers import StableDiffusionImg2ImgPipeline
 
-device = "cuda"
+device = 'cuda' if torch.cuda.is_available() else 'cpu'
+print(f'{device} is used')
 model_id_or_path = "runwayml/stable-diffusion-v1-5"
 pipe = StableDiffusionImg2ImgPipeline.from_pretrained(model_id_or_path, torch_dtype=torch.float16)
 pipe = pipe.to(device)
@@ -20,3 +21,5 @@ prompt = "A fantasy landscape, trending on artstation"
 
 images = pipe(prompt=prompt, image=init_image, strength=0.75, guidance_scale=7.5).images
 images[0].save("fantasy_landscape.png")
+
+print('Successful!')
