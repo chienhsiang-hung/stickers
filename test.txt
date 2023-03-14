@@ -1,0 +1,3 @@
+https://weirdwonderfulai.art/general/make-sticker-designs-using-ai-midjourney/
+
+/imagine prompt: https://raw.githubusercontent.com/chienhsiang-hung/stickers/main/msticker5.jpg, Expression: Silly grin, Action: Juggling fruits, Attire: Chef's uniform, Coat: Solid orange, Race: Asian, Gender: Male, Age: 40
